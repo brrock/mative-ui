@@ -1,4 +1,4 @@
-# native-ui
+# mative-ui poc
 
 SwiftUI rendered from Bun over FFI. The current runtime is a PoC architecture where Bun hosts the process and manually pumps AppKit events.
 
