@@ -1,0 +1,19 @@
+{
+  "name": "native-ui",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build:native": "swiftc -emit-library -o libmative.dylib bridge.swift -Xlinker -install_name -Xlinker @rpath/libmative.dylib",
+    "dev": "bun run build:native && bun run app.ts",
+    "start": "bun run dev",
+    "build": "bun run build.ts",
+    "build:app": "bun run build.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
